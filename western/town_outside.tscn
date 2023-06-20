@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccovp4y1dju85"]
+[gd_scene load_steps=5 format=3 uid="uid://ccovp4y1dju85"]
 
 [ext_resource type="Texture2D" uid="uid://b8juwws6uv5c3" path="res://icon.svg" id="1_ctl16"]
 [ext_resource type="PackedScene" uid="uid://ch5ml5k2kaq6w" path="res://player.tscn" id="2_mt7x6"]
+[ext_resource type="Script" path="res://pdentrance.gd" id="3_i5wqq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o20xx"]
+size = Vector2(75, 72.7124)
 
 [node name="town_outside" type="Node2D"]
 
@@ -11,28 +15,35 @@ scale = Vector2(12.1641, 0.335937)
 texture = ExtResource("1_ctl16")
 
 [node name="player" parent="." instance=ExtResource("2_mt7x6")]
-position = Vector2(362, 582)
+position = Vector2(363, 578)
 
 [node name="sheriffs office outside" type="Sprite2D" parent="."]
 position = Vector2(238, 537)
 texture = ExtResource("1_ctl16")
 
 [node name="bank" type="Sprite2D" parent="."]
-position = Vector2(967, 533)
+position = Vector2(970, 541)
 texture = ExtResource("1_ctl16")
 
 [node name="barn" type="Sprite2D" parent="."]
-position = Vector2(-296, 535)
+position = Vector2(-297, 536)
 texture = ExtResource("1_ctl16")
 
 [node name="saloon" type="Sprite2D" parent="."]
-position = Vector2(-21, 536)
+position = Vector2(-23, 540)
 texture = ExtResource("1_ctl16")
 
 [node name="other building" type="Sprite2D" parent="."]
-position = Vector2(501, 532)
+position = Vector2(502, 536)
 texture = ExtResource("1_ctl16")
 
 [node name="other building2" type="Sprite2D" parent="."]
-position = Vector2(738, 530)
+position = Vector2(742, 536)
 texture = ExtResource("1_ctl16")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(237, 564)
+shape = SubResource("RectangleShape2D_o20xx")
+script = ExtResource("3_i5wqq")
