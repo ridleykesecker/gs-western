@@ -1,49 +1,65 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccovp4y1dju85"]
+[gd_scene load_steps=6 format=3 uid="uid://ccovp4y1dju85"]
 
 [ext_resource type="Texture2D" uid="uid://b8juwws6uv5c3" path="res://icon.svg" id="1_ctl16"]
 [ext_resource type="PackedScene" uid="uid://ch5ml5k2kaq6w" path="res://player.tscn" id="2_mt7x6"]
 [ext_resource type="Script" path="res://pdentrance.gd" id="3_i5wqq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o20xx"]
-size = Vector2(75, 72.7124)
+size = Vector2(75, 84.3562)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xah7w"]
+size = Vector2(128.354, 32.3678)
 
 [node name="town_outside" type="Node2D"]
 
-[node name="ground" type="Sprite2D" parent="."]
-position = Vector2(370.5, 622.5)
-scale = Vector2(12.1641, 0.335937)
-texture = ExtResource("1_ctl16")
-
-[node name="player" parent="." instance=ExtResource("2_mt7x6")]
-position = Vector2(363, 578)
-
 [node name="sheriffs office outside" type="Sprite2D" parent="."]
-position = Vector2(238, 537)
+position = Vector2(281, 432)
+scale = Vector2(1.3125, 1.3125)
 texture = ExtResource("1_ctl16")
 
 [node name="bank" type="Sprite2D" parent="."]
-position = Vector2(970, 541)
+position = Vector2(1042.5, 414.5)
+scale = Vector2(1.63281, 1.63281)
 texture = ExtResource("1_ctl16")
 
 [node name="barn" type="Sprite2D" parent="."]
-position = Vector2(-297, 536)
+position = Vector2(-226, 411)
+scale = Vector2(1.60938, 1.60938)
 texture = ExtResource("1_ctl16")
 
 [node name="saloon" type="Sprite2D" parent="."]
-position = Vector2(-23, 540)
+position = Vector2(36, 427)
+scale = Vector2(1.42188, 1.42188)
 texture = ExtResource("1_ctl16")
 
 [node name="other building" type="Sprite2D" parent="."]
-position = Vector2(502, 536)
+position = Vector2(549, 436)
+scale = Vector2(1.60937, 1.23437)
 texture = ExtResource("1_ctl16")
 
 [node name="other building2" type="Sprite2D" parent="."]
-position = Vector2(742, 536)
+position = Vector2(795, 429)
+scale = Vector2(1.32813, 1.32813)
 texture = ExtResource("1_ctl16")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(237, 564)
+position = Vector2(260, 479.822)
 shape = SubResource("RectangleShape2D_o20xx")
 script = ExtResource("3_i5wqq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="ground" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(478, 580.25)
+scale = Vector2(16.9453, 1.01953)
+texture = ExtResource("1_ctl16")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(478.5, 531.5)
+scale = Vector2(16.9453, 1.01953)
+shape = SubResource("RectangleShape2D_xah7w")
+
+[node name="player" parent="." instance=ExtResource("2_mt7x6")]
+position = Vector2(367, 488)
