@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccovp4y1dju85"]
+
+[ext_resource type="Texture2D" uid="uid://b8juwws6uv5c3" path="res://icon.svg" id="1_ctl16"]
+[ext_resource type="PackedScene" uid="uid://ch5ml5k2kaq6w" path="res://player.tscn" id="2_mt7x6"]
+
+[node name="town_outside" type="Node2D"]
+
+[node name="ground" type="Sprite2D" parent="."]
+position = Vector2(370.5, 622.5)
+scale = Vector2(12.1641, 0.335937)
+texture = ExtResource("1_ctl16")
+
+[node name="player" parent="." instance=ExtResource("2_mt7x6")]
+position = Vector2(362, 582)
+
+[node name="sheriffs office outside" type="Sprite2D" parent="."]
+position = Vector2(238, 537)
+texture = ExtResource("1_ctl16")
+
+[node name="bank" type="Sprite2D" parent="."]
+position = Vector2(967, 533)
+texture = ExtResource("1_ctl16")
+
+[node name="barn" type="Sprite2D" parent="."]
+position = Vector2(-296, 535)
+texture = ExtResource("1_ctl16")
+
+[node name="saloon" type="Sprite2D" parent="."]
+position = Vector2(-21, 536)
+texture = ExtResource("1_ctl16")
+
+[node name="other building" type="Sprite2D" parent="."]
+position = Vector2(501, 532)
+texture = ExtResource("1_ctl16")
+
+[node name="other building2" type="Sprite2D" parent="."]
+position = Vector2(738, 530)
+texture = ExtResource("1_ctl16")

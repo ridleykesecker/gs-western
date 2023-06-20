@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://y44hopnvwkg3"]
+
+[ext_resource type="Texture2D" uid="uid://b8juwws6uv5c3" path="res://icon.svg" id="1_c7lci"]
+[ext_resource type="PackedScene" uid="uid://ch5ml5k2kaq6w" path="res://player.tscn" id="2_hdpux"]
+
+[node name="bank inside" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(360, 631.5)
+scale = Vector2(2.48438, 0.242188)
+texture = ExtResource("1_c7lci")
+
+[node name="player" parent="." instance=ExtResource("2_hdpux")]
+position = Vector2(361, 601)

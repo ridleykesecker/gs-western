@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwjlbohi8bl01"]
+
+[ext_resource type="Texture2D" uid="uid://b8juwws6uv5c3" path="res://icon.svg" id="1_mblpv"]
+[ext_resource type="PackedScene" uid="uid://ch5ml5k2kaq6w" path="res://player.tscn" id="2_r4hb2"]
+
+[node name="sheriffs office inside" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(610, 619)
+scale = Vector2(4.40625, 0.421875)
+texture = ExtResource("1_mblpv")
+
+[node name="player" parent="." instance=ExtResource("2_r4hb2")]
+position = Vector2(609, 572)
