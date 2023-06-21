@@ -1,14 +1,37 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwjlbohi8bl01"]
+[gd_scene load_steps=6 format=3 uid="uid://cwjlbohi8bl01"]
 
 [ext_resource type="Texture2D" uid="uid://b8juwws6uv5c3" path="res://icon.svg" id="1_mblpv"]
+[ext_resource type="Script" path="res://sheriffofficeexit.gd" id="2_b8pax"]
 [ext_resource type="PackedScene" uid="uid://ch5ml5k2kaq6w" path="res://player.tscn" id="2_r4hb2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2n4t6"]
+size = Vector2(75, 81)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ulwci"]
+size = Vector2(562, 80)
 
 [node name="sheriffs office inside" type="Node2D"]
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(610, 619)
-scale = Vector2(4.40625, 0.421875)
+[node name="player" parent="." instance=ExtResource("2_r4hb2")]
+position = Vector2(645, 544)
+
+[node name="exit" type="Area2D" parent="."]
+script = ExtResource("2_b8pax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="exit"]
+position = Vector2(850.5, 548.5)
+shape = SubResource("RectangleShape2D_2n4t6")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(608, 626)
+shape = SubResource("RectangleShape2D_ulwci")
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(609, 626)
+scale = Vector2(4.40625, 0.617188)
 texture = ExtResource("1_mblpv")
 
-[node name="player" parent="." instance=ExtResource("2_r4hb2")]
-position = Vector2(609, 572)
+[connection signal="body_entered" from="exit" to="exit" method="_on_body_entered"]
+[connection signal="body_exited" from="exit" to="exit" method="_on_body_exited"]

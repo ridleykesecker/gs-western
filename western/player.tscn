@@ -6,20 +6,19 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dwsb"]
 size = Vector2(71.993, 120.56)
 
-[node name="player" type="Node2D"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="player" type="CharacterBody2D"]
 script = ExtResource("1_qqjkw")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="."]
 limit_left = -632
+limit_right = 1550
 limit_bottom = 632
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 0.249999)
 scale = Vector2(0.194463, 0.252986)
 shape = SubResource("RectangleShape2D_0dwsb")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.133696, 0.112319)
 texture = ExtResource("1_h02ga")
