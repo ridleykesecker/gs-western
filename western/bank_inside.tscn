@@ -12,10 +12,18 @@ size = Vector2(562, 80)
 
 [node name="bank inside" type="Node2D"]
 
-[node name="exit" type="Area2D" parent="."]
+[node name="Label" type="Label" parent="."]
+offset_left = 560.0
+offset_top = 472.0
+offset_right = 628.0
+offset_bottom = 511.0
+text = "bank
+"
+
+[node name="bankexit" type="Area2D" parent="."]
 script = ExtResource("1_r53oq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="exit"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bankexit"]
 position = Vector2(864.5, 547)
 shape = SubResource("RectangleShape2D_qjd75")
 
@@ -33,5 +41,5 @@ texture = ExtResource("1_c7lci")
 [node name="player" parent="." instance=ExtResource("2_hdpux")]
 position = Vector2(615, 562)
 
-[connection signal="body_entered" from="exit" to="exit" method="_on_exit_body_entered"]
-[connection signal="body_exited" from="exit" to="exit" method="_on_exit_body_exited"]
+[connection signal="body_entered" from="bankexit" to="bankexit" method="_on_exit_body_entered"]
+[connection signal="body_exited" from="bankexit" to="bankexit" method="_on_exit_body_exited"]

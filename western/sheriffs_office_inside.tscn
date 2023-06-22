@@ -15,11 +15,11 @@ size = Vector2(562, 80)
 [node name="player" parent="." instance=ExtResource("2_r4hb2")]
 position = Vector2(645, 544)
 
-[node name="exit" type="Area2D" parent="."]
+[node name="sheriffexit" type="Area2D" parent="."]
 script = ExtResource("2_b8pax")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="exit"]
-position = Vector2(850.5, 548.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sheriffexit"]
+position = Vector2(848, 545)
 shape = SubResource("RectangleShape2D_2n4t6")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -33,5 +33,12 @@ position = Vector2(609, 626)
 scale = Vector2(4.40625, 0.617188)
 texture = ExtResource("1_mblpv")
 
-[connection signal="body_entered" from="exit" to="exit" method="_on_body_entered"]
-[connection signal="body_exited" from="exit" to="exit" method="_on_body_exited"]
+[node name="Label" type="Label" parent="."]
+offset_left = 546.0
+offset_top = 497.0
+offset_right = 709.0
+offset_bottom = 520.0
+text = "sheriff office"
+
+[connection signal="body_entered" from="sheriffexit" to="sheriffexit" method="_on_body_entered"]
+[connection signal="body_exited" from="sheriffexit" to="sheriffexit" method="_on_body_exited"]

@@ -2,7 +2,7 @@ extends Area2D
 
 var at_door = false
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_pressed("ui_up") and at_door:
 		get_tree().change_scene_to_file("res://sheriffs_office_inside.tscn")
 		at_door = false

@@ -9,9 +9,12 @@ func _process(delta):
 		at_door = false
 
 
-func _on_body_entered(body):
+func _on_body_entered(_barnexit):
 	at_door = true
 
 
-func _on_body_exited(body):
+func _on_body_exited(_barnexit):
 	at_door = false
+
+func bankexit(on_body_entered):
+	
