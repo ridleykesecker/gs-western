@@ -16,5 +16,3 @@ func _on_body_entered(_barnexit):
 func _on_body_exited(_barnexit):
 	at_door = false
 
-func bankexit(on_body_entered):
-	
