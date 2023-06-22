@@ -1,0 +1,156 @@
+[gd_scene load_steps=9 format=3 uid="uid://1q4i4ibst5es"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_28rom"]
+[ext_resource type="FontFile" uid="uid://d1i0fnng6pj78" path="res://Font/Carnevalee Freakshow.ttf" id="1_tmkc6"]
+[ext_resource type="Texture2D" uid="uid://c801bpa23swcx" path="res://BG Sprites/m2/1.png" id="3_1ah16"]
+[ext_resource type="Texture2D" uid="uid://b23tgih8mtl0q" path="res://BG Sprites/m2/2.png" id="4_jsevs"]
+[ext_resource type="Texture2D" uid="uid://rvbge2e8ksx5" path="res://BG Sprites/m2/4.png" id="5_3j8ds"]
+[ext_resource type="Texture2D" uid="uid://bqekqs4hxvvxk" path="res://BG Sprites/m2/7.png" id="5_eovft"]
+[ext_resource type="Texture2D" uid="uid://d1ub7vbo2lfu1" path="res://BG Sprites/m2/5.png" id="7_icdvn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rvsm7"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_28rom")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+material = SubResource("ShaderMaterial_rvsm7")
+layout_mode = 0
+offset_left = 466.0
+offset_top = 210.0
+offset_right = 543.867
+offset_bottom = 311.0
+scale = Vector2(2.57867, 2.26967)
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.552941, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_tmkc6")
+text = "Start"
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.552941, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_tmkc6")
+text = "Credits"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.792157, 0.552941, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0.717647, 0.568627)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0.717647, 0.568627)
+theme_override_colors/icon_hover_color = Color(0, 0, 0.717647, 0.568627)
+theme_override_fonts/font = ExtResource("1_tmkc6")
+text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 71.0
+offset_right = 456.0
+offset_bottom = 97.0
+scale = Vector2(6.4691, 5.4762)
+theme_override_colors/font_color = Color(0.792157, 0.552941, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.40415, 0.252891, 1.44392e-07, 1)
+theme_override_fonts/font = ExtResource("1_tmkc6")
+text = "Western."
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.788235, 0.545098, 0.298039, 1)
+show_behind_parent = true
+position = Vector2(581, 327)
+scale = Vector2(2.149, 2.149)
+texture = ExtResource("3_1ah16")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+texture = ExtResource("4_jsevs")
+
+[node name="4" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(93.9972, 27.4546)
+scale = Vector2(0.70729, 0.754729)
+texture = ExtResource("5_3j8ds")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(1, 0.764706, 0.682353, 1)
+position = Vector2(4.65332, -9.30666)
+texture = ExtResource("5_eovft")
+
+[node name="More Backgrounds" type="Sprite2D" parent="."]
+position = Vector2(-84, -36)
+
+[node name="bg2" type="Sprite2D" parent="More Backgrounds"]
+modulate = Color(0.933333, 0.729412, 0.541176, 1)
+position = Vector2(-2283, -131)
+scale = Vector2(2.76, 2.48)
+texture = ExtResource("3_1ah16")
+
+[node name="bg" type="Sprite2D" parent="More Backgrounds"]
+modulate = Color(0.932374, 0.731316, 0.542324, 1)
+position = Vector2(-3871, -131)
+scale = Vector2(2.76, 2.48)
+texture = ExtResource("3_1ah16")
+
+[node name="mountains" type="Sprite2D" parent="More Backgrounds"]
+modulate = Color(0.894467, 0.624387, 0.399465, 1)
+position = Vector2(-4269, -57)
+scale = Vector2(1.379, 2.024)
+texture = ExtResource("4_jsevs")
+
+[node name="Sprite2D" type="Sprite2D" parent="More Backgrounds/mountains"]
+position = Vector2(575.977, 0)
+texture = ExtResource("4_jsevs")
+
+[node name="mountains2" type="Sprite2D" parent="More Backgrounds"]
+modulate = Color(0.894467, 0.624387, 0.399465, 1)
+position = Vector2(-2681, -57)
+scale = Vector2(1.379, 2.024)
+texture = ExtResource("4_jsevs")
+
+[node name="Sprite2D" type="Sprite2D" parent="More Backgrounds/mountains2"]
+position = Vector2(575.977, 0)
+texture = ExtResource("4_jsevs")
+
+[node name="Sprite2D" type="Sprite2D" parent="More Backgrounds"]
+modulate = Color(0.929412, 0.866667, 0.45098, 1)
+position = Vector2(-3887, -59)
+scale = Vector2(2.037, 2.037)
+texture = ExtResource("5_3j8ds")
+
+[node name="Sprite2D2" type="Sprite2D" parent="More Backgrounds"]
+modulate = Color(0.996078, 0.72549, 0.431373, 1)
+position = Vector2(-2189, -187)
+scale = Vector2(3.017, 2.821)
+texture = ExtResource("7_icdvn")
+
+[node name="grass" type="Sprite2D" parent="More Backgrounds"]
+modulate = Color(0.666259, 0.440947, 0.217133, 1)
+position = Vector2(-4269, -57)
+scale = Vector2(1.379, 2.024)
+texture = ExtResource("5_eovft")
+
+[node name="Sprite2D" type="Sprite2D" parent="More Backgrounds/grass"]
+position = Vector2(575.78, 0)
+texture = ExtResource("5_eovft")
+
+[node name="grass2" type="Sprite2D" parent="More Backgrounds"]
+modulate = Color(0.666259, 0.440947, 0.217133, 1)
+position = Vector2(-2681, -57)
+scale = Vector2(1.379, 2.024)
+texture = ExtResource("5_eovft")
+
+[node name="Sprite2D" type="Sprite2D" parent="More Backgrounds/grass2"]
+position = Vector2(575.78, 0)
+texture = ExtResource("5_eovft")
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
