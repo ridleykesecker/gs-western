@@ -24,5 +24,6 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func _on_area_2d_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
-	pass # Replace with function body.
+func _on_leftboundary_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+	if body == player:
+		

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ccovp4y1dju85"]
+[gd_scene load_steps=11 format=3 uid="uid://ccovp4y1dju85"]
 
 [ext_resource type="Texture2D" uid="uid://b8juwws6uv5c3" path="res://icon.svg" id="1_ctl16"]
 [ext_resource type="Script" path="res://mountaintrailing.gd" id="1_do4xv"]
@@ -6,12 +6,17 @@
 [ext_resource type="PackedScene" uid="uid://ch5ml5k2kaq6w" path="res://player.tscn" id="2_mt7x6"]
 [ext_resource type="Script" path="res://enter bank.gd" id="3_mp780"]
 [ext_resource type="Script" path="res://enter barn.gd" id="4_8s76v"]
+[ext_resource type="Script" path="res://leftboundary.gd" id="7_clpoo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o20xx"]
 size = Vector2(141.625, 171.011)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xah7w"]
 size = Vector2(128.354, 32.3678)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_onx5t"]
+a = Vector2(0, -80)
+b = Vector2(0, 839)
 
 [node name="town_outside" type="Node2D"]
 
@@ -89,6 +94,21 @@ position = Vector2(478.5, 531.5)
 scale = Vector2(16.9453, 1.01953)
 shape = SubResource("RectangleShape2D_xah7w")
 
+[node name="leftboundary" type="Area2D" parent="."]
+script = ExtResource("7_clpoo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftboundary"]
+position = Vector2(-488, 58)
+shape = SubResource("SegmentShape2D_onx5t")
+
+[node name="Area2" type="Area2D" parent="."]
+position = Vector2(1705, -46)
+script = ExtResource("7_clpoo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2"]
+position = Vector2(-407, 62)
+shape = SubResource("SegmentShape2D_onx5t")
+
 [connection signal="body_entered" from="enter sheriffs office" to="enter sheriffs office" method="_on_body_entered"]
 [connection signal="body_exited" from="enter sheriffs office" to="enter sheriffs office" method="_on_body_exited"]
 [connection signal="area_shape_entered" from="enter bank" to="enter bank" method="_on_area_shape_entered"]
@@ -97,3 +117,5 @@ shape = SubResource("RectangleShape2D_xah7w")
 [connection signal="area_shape_entered" from="enter barn" to="enter barn" method="_on_area_shape_entered"]
 [connection signal="body_entered" from="enter barn" to="enter barn" method="_on_body_entered"]
 [connection signal="body_exited" from="enter barn" to="enter barn" method="_on_body_exited"]
+[connection signal="area_shape_entered" from="leftboundary" to="CharacterBody2D" method="_on_area_2d_area_shape_entered"]
+[connection signal="area_shape_entered" from="Area2" to="CharacterBody2D" method="_on_area_2d_area_shape_entered"]
