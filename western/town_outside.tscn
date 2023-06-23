@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://ccovp4y1dju85"]
+[gd_scene load_steps=18 format=3 uid="uid://ccovp4y1dju85"]
 
+[ext_resource type="Script" path="res://town_outside.gd" id="1_atrlv"]
 [ext_resource type="Texture2D" uid="uid://b8juwws6uv5c3" path="res://icon.svg" id="1_ctl16"]
 [ext_resource type="Script" path="res://Area2D.gd" id="2_4tnuw"]
 [ext_resource type="Texture2D" uid="uid://c801bpa23swcx" path="res://BG Sprites/m2/1.png" id="2_8vqd8"]
@@ -12,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bqekqs4hxvvxk" path="res://BG Sprites/m2/7.png" id="10_ie4p1"]
 [ext_resource type="Script" path="res://key1.gd" id="11_cod78"]
 [ext_resource type="Texture2D" uid="uid://cu8py77gaxu8t" path="res://12-2-key-free-png-image.png" id="12_1row1"]
+[ext_resource type="Script" path="res://key2.gd" id="14_ebqkp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o20xx"]
 size = Vector2(141.625, 135.861)
@@ -23,6 +25,7 @@ size = Vector2(128.354, 32.3678)
 radius = 12.0416
 
 [node name="town_outside" type="Node2D"]
+script = ExtResource("1_atrlv")
 
 [node name="sheriffs office outside" type="Sprite2D" parent="."]
 position = Vector2(281, 432)
@@ -357,7 +360,7 @@ position = Vector2(575.78, 0)
 texture = ExtResource("10_ie4p1")
 
 [node name="key1" type="Area2D" parent="."]
-position = Vector2(-99, 476)
+position = Vector2(-92, 466)
 script = ExtResource("11_cod78")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="key1"]
@@ -365,6 +368,19 @@ position = Vector2(9, 18)
 shape = SubResource("CircleShape2D_tjwgw")
 
 [node name="key" type="Sprite2D" parent="key1"]
+position = Vector2(9, 18)
+scale = Vector2(0.0624999, 0.0625)
+texture = ExtResource("12_1row1")
+
+[node name="key2" type="Area2D" parent="."]
+position = Vector2(906, 466)
+script = ExtResource("14_ebqkp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="key2"]
+position = Vector2(9, 18)
+shape = SubResource("CircleShape2D_tjwgw")
+
+[node name="key" type="Sprite2D" parent="key2"]
 position = Vector2(9, 18)
 scale = Vector2(0.0624999, 0.0625)
 texture = ExtResource("12_1row1")
@@ -378,3 +394,4 @@ texture = ExtResource("12_1row1")
 [connection signal="body_entered" from="enterbarn" to="enterbarn" method="_on_body_entered"]
 [connection signal="body_exited" from="enterbarn" to="enterbarn" method="_on_body_exited"]
 [connection signal="body_entered" from="key1" to="key1" method="_on_body_entered"]
+[connection signal="body_entered" from="key2" to="key2" method="_on_body_entered"]
