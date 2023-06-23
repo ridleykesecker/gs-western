@@ -60,9 +60,14 @@ _data = {
 }
 
 [node name="player" type="CharacterBody2D"]
+z_index = 14
 script = ExtResource("1_qqjkw")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -3000
+limit_top = -275
+limit_right = 3300
+limit_bottom = 650
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 3)
