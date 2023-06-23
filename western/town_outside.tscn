@@ -1,9 +1,11 @@
 [gd_scene load_steps=18 format=3 uid="uid://ccovp4y1dju85"]
 
 [ext_resource type="Script" path="res://town_outside.gd" id="1_atrlv"]
+[ext_resource type="Texture2D" uid="uid://cghmukmq715x2" path="res://BG Sprites/Assets/kisspng-animation-bar-western-saloon-log-cabin-wild-west-5abfaa9f596580.8719678815225104953662-removebg-preview.png" id="1_5hme7"]
 [ext_resource type="Texture2D" uid="uid://b8juwws6uv5c3" path="res://icon.svg" id="1_ctl16"]
 [ext_resource type="Script" path="res://Area2D.gd" id="2_4tnuw"]
 [ext_resource type="Texture2D" uid="uid://c801bpa23swcx" path="res://BG Sprites/m2/1.png" id="2_8vqd8"]
+[ext_resource type="FontFile" uid="uid://d1i0fnng6pj78" path="res://Font/Carnevalee Freakshow.ttf" id="2_a0q0y"]
 [ext_resource type="PackedScene" uid="uid://ch5ml5k2kaq6w" path="res://player.tscn" id="2_mt7x6"]
 [ext_resource type="Script" path="res://enter bank.gd" id="3_mp780"]
 [ext_resource type="Texture2D" uid="uid://b23tgih8mtl0q" path="res://BG Sprites/m2/2.png" id="4_1j0e4"]
@@ -28,14 +30,37 @@ radius = 12.0416
 script = ExtResource("1_atrlv")
 
 [node name="sheriffs office outside" type="Sprite2D" parent="."]
-position = Vector2(281, 432)
-scale = Vector2(1.3125, 1.3125)
-texture = ExtResource("1_ctl16")
+position = Vector2(738.094, 326.125)
+scale = Vector2(2.06851, 1.91771)
+texture = ExtResource("1_5hme7")
+
+[node name="Label" type="Label" parent="sheriffs office outside"]
+offset_left = -41.6212
+offset_top = -100.185
+offset_right = 65.3788
+offset_bottom = -56.1847
+theme_override_colors/font_color = Color(0.996254, 0.724252, 0.430827, 1)
+theme_override_colors/font_shadow_color = Color(0.257779, 0.142802, 0.0283179, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_a0q0y")
+text = "Sheriff's Office"
 
 [node name="bank" type="Sprite2D" parent="."]
-position = Vector2(1044, 410)
+position = Vector2(1349, 336)
 scale = Vector2(1.63281, 1.63281)
-texture = ExtResource("1_ctl16")
+texture = ExtResource("1_5hme7")
+
+[node name="Label" type="Label" parent="bank"]
+offset_left = -36.134
+offset_top = -111.464
+offset_right = 52.866
+offset_bottom = -53.4643
+theme_override_colors/font_color = Color(0.996254, 0.724252, 0.430827, 1)
+theme_override_colors/font_shadow_color = Color(0.395687, 0.230149, 0.0639658, 1)
+theme_override_colors/font_outline_color = Color(0.257779, 0.142802, 0.0283179, 1)
+theme_override_fonts/font = ExtResource("2_a0q0y")
+theme_override_font_sizes/font_size = 40
+text = "Bank"
 
 [node name="barn" type="Sprite2D" parent="."]
 position = Vector2(-226, 411)
@@ -48,12 +73,12 @@ scale = Vector2(1.42188, 1.42188)
 texture = ExtResource("1_ctl16")
 
 [node name="other building" type="Sprite2D" parent="."]
-position = Vector2(549, 436)
+position = Vector2(1084, 448)
 scale = Vector2(1.60937, 1.23437)
 texture = ExtResource("1_ctl16")
 
 [node name="other building2" type="Sprite2D" parent="."]
-position = Vector2(795, 429)
+position = Vector2(1401, 431)
 scale = Vector2(1.32813, 1.32813)
 texture = ExtResource("1_ctl16")
 
@@ -62,7 +87,7 @@ position = Vector2(291, 477)
 script = ExtResource("2_4tnuw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enter sheriffs office"]
-position = Vector2(-8, -33.7444)
+position = Vector2(451, -34)
 shape = SubResource("RectangleShape2D_o20xx")
 
 [node name="enter bank" type="Area2D" parent="."]
@@ -70,7 +95,7 @@ position = Vector2(1048, 475)
 script = ExtResource("3_mp780")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enter bank"]
-position = Vector2(-1, -26.3611)
+position = Vector2(331, -62)
 shape = SubResource("RectangleShape2D_o20xx")
 
 [node name="enterbarn" type="Area2D" parent="."]
@@ -82,16 +107,14 @@ position = Vector2(-1276, -34.9305)
 shape = SubResource("RectangleShape2D_o20xx")
 
 [node name="player" parent="." instance=ExtResource("2_mt7x6")]
-
 position = Vector2(-95, 447)
-
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-1, 4)
 
 [node name="ground" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(478, 580.25)
-scale = Vector2(16.9453, 1.01953)
+position = Vector2(550.625, 573)
+scale = Vector2(32.5371, 1.01953)
 texture = ExtResource("1_ctl16")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
