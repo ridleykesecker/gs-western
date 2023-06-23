@@ -1,7 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://ccovp4y1dju85"]
+[gd_scene load_steps=20 format=3 uid="uid://ccovp4y1dju85"]
 
-[ext_resource type="Script" path="res://town_outside.gd" id="1_atrlv"]
 [ext_resource type="Texture2D" uid="uid://cghmukmq715x2" path="res://BG Sprites/Assets/kisspng-animation-bar-western-saloon-log-cabin-wild-west-5abfaa9f596580.8719678815225104953662-removebg-preview.png" id="1_5hme7"]
+[ext_resource type="Script" path="res://town_outside.gd" id="1_atrlv"]
 [ext_resource type="Texture2D" uid="uid://b8juwws6uv5c3" path="res://icon.svg" id="1_ctl16"]
 [ext_resource type="Script" path="res://Area2D.gd" id="2_4tnuw"]
 [ext_resource type="Texture2D" uid="uid://c801bpa23swcx" path="res://BG Sprites/m2/1.png" id="2_8vqd8"]
