@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://xvtxep3efmrb"]
+
+[ext_resource type="Texture2D" uid="uid://be6yd8e6t3nlt" path="res://Font/kisspng-animation-bar-western-saloon-log-cabin-wild-west-5abfaa9f596580.8719678815225104953662-removebg-preview.png" id="1_5qj13"]
+[ext_resource type="FontFile" uid="uid://d1i0fnng6pj78" path="res://Font/Carnevalee Freakshow.ttf" id="2_cmiik"]
+
+[node name="Building1" type="Sprite2D"]
+position = Vector2(492, -400)
+texture = ExtResource("1_5qj13")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -44.0
+offset_top = -100.0
+offset_right = 44.0
+offset_bottom = -78.0
+theme_override_colors/font_color = Color(0.996254, 0.724252, 0.430827, 1)
+theme_override_colors/font_shadow_color = Color(0.257779, 0.142802, 0.0283179, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_cmiik")
+text = "Sheriff's Office"

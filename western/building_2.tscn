@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://4sedbn506n45"]
+
+[ext_resource type="Texture2D" uid="uid://be6yd8e6t3nlt" path="res://Font/kisspng-animation-bar-western-saloon-log-cabin-wild-west-5abfaa9f596580.8719678815225104953662-removebg-preview.png" id="1_og505"]
+[ext_resource type="FontFile" uid="uid://d1i0fnng6pj78" path="res://Font/Carnevalee Freakshow.ttf" id="2_536ke"]
+
+[node name="Building2" type="Sprite2D"]
+position = Vector2(659, -26)
+texture = ExtResource("1_og505")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -30.0
+offset_top = -112.0
+offset_right = 28.0
+offset_bottom = -69.0
+theme_override_colors/font_color = Color(0.996254, 0.724252, 0.430827, 1)
+theme_override_colors/font_shadow_color = Color(0.0400263, 0.0133197, 0.00161652, 1)
+theme_override_fonts/font = ExtResource("2_536ke")
+theme_override_font_sizes/font_size = 32
+text = "Bank"

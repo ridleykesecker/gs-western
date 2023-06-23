@@ -13,7 +13,7 @@ size = Vector2(562, 80)
 [node name="sheriffs office inside" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("2_r4hb2")]
-position = Vector2(645, 544)
+position = Vector2(773, 555)
 
 [node name="sheriffexit" type="Area2D" parent="."]
 script = ExtResource("2_b8pax")
