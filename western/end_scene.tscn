@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://c86kwf8ljljfq"]
+
+[ext_resource type="PackedScene" uid="uid://uopq3a8iy4rk" path="res://BG Sprites/more_backgrounds.res" id="1_sy4rm"]
+[ext_resource type="FontFile" uid="uid://d1i0fnng6pj78" path="res://Font/Carnevalee Freakshow.ttf" id="2_t4pib"]
+
+[node name="EndScene" type="Node2D"]
+
+[node name="More Backgrounds" parent="." instance=ExtResource("1_sy4rm")]
+position = Vector2(3549, 431)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 31.0
+offset_top = 74.0
+offset_right = 1141.0
+offset_bottom = 676.0
+theme_override_colors/font_color = Color(0.257779, 0.142802, 0.0283179, 1)
+theme_override_colors/font_shadow_color = Color(0.996254, 0.724252, 0.430827, 1)
+theme_override_colors/font_outline_color = Color(0.395687, 0.230149, 0.0639658, 1)
+theme_override_fonts/font = ExtResource("2_t4pib")
+theme_override_font_sizes/font_size = 185
+text = "Congratulations!"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 321.0
+offset_top = 314.0
+offset_right = 801.0
+offset_bottom = 395.0
+theme_override_colors/font_color = Color(0.498039, 0.247059, 0.0509804, 1)
+theme_override_colors/font_shadow_color = Color(0.74612, 0.457407, 0.173321, 1)
+theme_override_fonts/font = ExtResource("2_t4pib")
+theme_override_font_sizes/font_size = 69
+text = "Thanks for playing!"
