@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ch5ml5k2kaq6w"]
+[gd_scene load_steps=7 format=3 uid="uid://ch5ml5k2kaq6w"]
 
 [ext_resource type="Texture2D" uid="uid://dh0swng4y7xf6" path="res://Screenshot 2023-06-20 140809.png" id="1_h02ga"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_qqjkw"]
@@ -6,10 +6,32 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dwsb"]
 size = Vector2(71.993, 120.56)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_6356m"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_78lq6"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6vrfl"]
+_data = {
+"new_animation": SubResource("Animation_78lq6")
+}
+
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_qqjkw")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 limit_left = -632
 limit_right = 1550
 limit_bottom = 632
@@ -22,3 +44,12 @@ shape = SubResource("RectangleShape2D_0dwsb")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.133696, 0.112319)
 texture = ExtResource("1_h02ga")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6356m")
+animation = &"new_animation"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_6vrfl")
+}

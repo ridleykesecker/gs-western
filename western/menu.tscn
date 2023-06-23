@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://1q4i4ibst5es"]
+[gd_scene load_steps=9 format=3 uid="uid://b45pe4gcf80hu"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_28rom"]
 [ext_resource type="FontFile" uid="uid://d1i0fnng6pj78" path="res://Font/Carnevalee Freakshow.ttf" id="1_tmkc6"]
@@ -60,6 +60,7 @@ offset_top = 71.0
 offset_right = 456.0
 offset_bottom = 97.0
 scale = Vector2(6.4691, 5.4762)
+mouse_filter = 1
 theme_override_colors/font_color = Color(0.792157, 0.552941, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.40415, 0.252891, 1.44392e-07, 1)
 theme_override_fonts/font = ExtResource("1_tmkc6")
