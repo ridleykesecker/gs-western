@@ -1,21 +1,54 @@
-[gd_scene load_steps=7 format=3 uid="uid://ch5ml5k2kaq6w"]
+[gd_scene load_steps=13 format=3 uid="uid://ch5ml5k2kaq6w"]
 
 [ext_resource type="Texture2D" uid="uid://dh0swng4y7xf6" path="res://Screenshot 2023-06-20 140809.png" id="1_h02ga"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_qqjkw"]
+[ext_resource type="Texture2D" uid="uid://dfyqjkqb5kqid" path="res://Player.png" id="3_5up55"]
+[ext_resource type="Texture2D" uid="uid://der1l7xths6vh" path="res://Player (2).png" id="3_gh558"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dwsb"]
 size = Vector2(71.993, 120.56)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjqk5"]
+atlas = ExtResource("3_gh558")
+region = Rect2(0, 0, 120, 274)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgfhn"]
+atlas = ExtResource("3_gh558")
+region = Rect2(278, 279, 139, 279)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ef4nl"]
+atlas = ExtResource("3_gh558")
+region = Rect2(351, 0, 117, 276)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egkul"]
+atlas = ExtResource("3_gh558")
+region = Rect2(351, 552, 117, 276)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_6356m"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjqk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgfhn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ef4nl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_egkul")
+}],
 "loop": true,
-"name": &"default",
+"name": &"Walking",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5up55")
+}],
 "loop": true,
-"name": &"new_animation",
+"name": &"default",
 "speed": 5.0
 }]
 
@@ -46,8 +79,11 @@ scale = Vector2(0.133696, 0.112319)
 texture = ExtResource("1_h02ga")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(339, 290)
+scale = Vector2(1.66957, 1.58955)
 sprite_frames = SubResource("SpriteFrames_6356m")
-animation = &"new_animation"
+animation = &"Walking"
+frame_progress = 0.288669
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
 libraries = {
