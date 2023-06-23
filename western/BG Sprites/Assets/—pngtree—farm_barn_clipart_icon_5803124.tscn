@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj75xnt04rfa6"]
+
+[ext_resource type="Texture2D" uid="uid://da250bn0clxru" path="res://Font/—Pngtree—farm barn clipart icon_5803124.png" id="1_nexi3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pca1a"]
+
+[node name="—pngtree—farmBarnClipartIcon5803124" type="Sprite2D"]
+modulate = Color(0.996254, 0.724252, 0.430827, 1)
+material = SubResource("ShaderMaterial_pca1a")
+position = Vector2(-62, -297)
+scale = Vector2(0.378958, 0.365)
+texture = ExtResource("1_nexi3")
