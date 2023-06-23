@@ -79,7 +79,6 @@ shape = SubResource("RectangleShape2D_o20xx")
 
 [node name="player" parent="." instance=ExtResource("2_mt7x6")]
 position = Vector2(-95, 447)
-scale = Vector2(1, 1)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-1, 4)

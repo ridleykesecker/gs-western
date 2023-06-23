@@ -86,7 +86,7 @@ position = Vector2(4.65332, -9.30666)
 texture = ExtResource("5_eovft")
 
 [node name="More Backgrounds" type="Sprite2D" parent="."]
-position = Vector2(-84, -36)
+position = Vector2(1049, -180)
 
 [node name="bg2" type="Sprite2D" parent="More Backgrounds"]
 modulate = Color(0.933333, 0.729412, 0.541176, 1)
