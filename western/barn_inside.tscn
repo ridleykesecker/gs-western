@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bareg34l7j4wb"]
+[gd_scene load_steps=7 format=3 uid="uid://bareg34l7j4wb"]
 
 [ext_resource type="PackedScene" uid="uid://ch5ml5k2kaq6w" path="res://player.tscn" id="1_aqubc"]
 [ext_resource type="Script" path="res://barnexit.gd" id="2_0j2ru"]
@@ -9,6 +9,8 @@ size = Vector2(45, 71)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8unqm"]
 size = Vector2(562, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2s8fv"]
 
 [node name="barn inside" type="Node2D"]
 
@@ -39,6 +41,11 @@ offset_top = 486.0
 offset_right = 694.0
 offset_bottom = 512.0
 text = "barn"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_2s8fv")
 
 [connection signal="body_entered" from="barnexit" to="barnexit" method="_on_body_entered"]
 [connection signal="body_exited" from="barnexit" to="barnexit" method="_on_body_exited"]
