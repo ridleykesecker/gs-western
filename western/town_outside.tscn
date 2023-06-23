@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ccovp4y1dju85"]
+[gd_scene load_steps=24 format=3 uid="uid://ccovp4y1dju85"]
 
 [ext_resource type="Texture2D" uid="uid://cghmukmq715x2" path="res://BG Sprites/Assets/kisspng-animation-bar-western-saloon-log-cabin-wild-west-5abfaa9f596580.8719678815225104953662-removebg-preview.png" id="1_5hme7"]
 [ext_resource type="Script" path="res://town_outside.gd" id="1_atrlv"]
@@ -448,6 +448,9 @@ texture_region_size = Vector2i(70, 70)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_asqpn")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpact"]
+size = Vector2(23, 1319)
+
 [node name="town_outside" type="Node2D"]
 z_index = 1
 script = ExtResource("1_atrlv")
@@ -492,6 +495,7 @@ text = "Bank"
 metadata/_edit_use_anchors_ = true
 
 [node name="barn" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(-822.907, 156.907)
 scale = Vector2(1.14318, 1.13151)
 texture = ExtResource("4_18neg")
@@ -541,21 +545,21 @@ position = Vector2(1615, 348)
 [node name="bg2" type="Sprite2D" parent="."]
 modulate = Color(0.933333, 0.729412, 0.541176, 1)
 visibility_layer = 2
-position = Vector2(3573.15, -1488.24)
+position = Vector2(2155.15, -1331.24)
 scale = Vector2(2.76, 2.48)
 texture = ExtResource("2_8vqd8")
 
 [node name="bg" type="Sprite2D" parent="."]
 modulate = Color(0.932374, 0.731316, 0.542324, 1)
 visibility_layer = 2
-position = Vector2(1985.15, -1488.24)
+position = Vector2(567.15, -1331.24)
 scale = Vector2(2.76, 2.48)
 texture = ExtResource("2_8vqd8")
 
 [node name="mountains" type="Sprite2D" parent="."]
 modulate = Color(0.894467, 0.624387, 0.399465, 1)
 visibility_layer = 2
-position = Vector2(1587.15, -1414.24)
+position = Vector2(169.15, -1257.24)
 scale = Vector2(1.379, 2.024)
 texture = ExtResource("4_1j0e4")
 
@@ -567,7 +571,7 @@ texture = ExtResource("4_1j0e4")
 [node name="mountains2" type="Sprite2D" parent="."]
 modulate = Color(0.894467, 0.624387, 0.399465, 1)
 visibility_layer = 2
-position = Vector2(3175.15, -1414.24)
+position = Vector2(1757.15, -1257.24)
 scale = Vector2(1.379, 2.024)
 texture = ExtResource("4_1j0e4")
 
@@ -579,21 +583,21 @@ texture = ExtResource("4_1j0e4")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.929412, 0.866667, 0.45098, 1)
 visibility_layer = 2
-position = Vector2(1969.15, -1416.24)
+position = Vector2(551.15, -1259.24)
 scale = Vector2(2.037, 2.037)
 texture = ExtResource("7_yeom1")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 modulate = Color(0.996078, 0.72549, 0.431373, 1)
 visibility_layer = 2
-position = Vector2(3669.88, -1545)
+position = Vector2(2251.88, -1388)
 scale = Vector2(3.017, 2.821)
 texture = ExtResource("6_slxrd")
 
 [node name="grass" type="Sprite2D" parent="."]
 modulate = Color(0.666259, 0.440947, 0.217133, 1)
 visibility_layer = 2
-position = Vector2(1587.15, -1414.24)
+position = Vector2(169.15, -1257.24)
 scale = Vector2(1.379, 2.024)
 texture = ExtResource("10_ie4p1")
 
@@ -605,14 +609,14 @@ texture = ExtResource("10_ie4p1")
 [node name="bg3" type="Sprite2D" parent="."]
 modulate = Color(0.933333, 0.729412, 0.541176, 1)
 visibility_layer = 2
-position = Vector2(3573.15, -1488.24)
+position = Vector2(2155.15, -1331.24)
 scale = Vector2(2.76, 2.48)
 texture = ExtResource("2_8vqd8")
 
 [node name="grass2" type="Sprite2D" parent="."]
 modulate = Color(0.666259, 0.440947, 0.217133, 1)
 visibility_layer = 2
-position = Vector2(3175.15, -1414.24)
+position = Vector2(1757.15, -1257.24)
 scale = Vector2(1.379, 2.024)
 texture = ExtResource("10_ie4p1")
 
@@ -624,14 +628,14 @@ texture = ExtResource("10_ie4p1")
 [node name="bg4" type="Sprite2D" parent="."]
 modulate = Color(0.932374, 0.731316, 0.542324, 1)
 visibility_layer = 2
-position = Vector2(1985.15, -1488.24)
+position = Vector2(567.15, -1331.24)
 scale = Vector2(2.76, 2.48)
 texture = ExtResource("2_8vqd8")
 
 [node name="mountains3" type="Sprite2D" parent="."]
 modulate = Color(0.894467, 0.624387, 0.399465, 1)
 visibility_layer = 2
-position = Vector2(1587.15, -1414.24)
+position = Vector2(169.15, -1257.24)
 scale = Vector2(1.379, 2.024)
 texture = ExtResource("4_1j0e4")
 
@@ -643,7 +647,7 @@ texture = ExtResource("4_1j0e4")
 [node name="mountains4" type="Sprite2D" parent="."]
 modulate = Color(0.894467, 0.624387, 0.399465, 1)
 visibility_layer = 2
-position = Vector2(3175.15, -1414.24)
+position = Vector2(1757.15, -1257.24)
 scale = Vector2(1.379, 2.024)
 texture = ExtResource("4_1j0e4")
 
@@ -655,21 +659,21 @@ texture = ExtResource("4_1j0e4")
 [node name="Sprite2D3" type="Sprite2D" parent="."]
 modulate = Color(0.929412, 0.866667, 0.45098, 1)
 visibility_layer = 2
-position = Vector2(1969.15, -1416.24)
+position = Vector2(551.15, -1259.24)
 scale = Vector2(2.037, 2.037)
 texture = ExtResource("7_yeom1")
 
 [node name="Sprite2D4" type="Sprite2D" parent="."]
 modulate = Color(0.996078, 0.72549, 0.431373, 1)
 visibility_layer = 2
-position = Vector2(3669.88, -1545)
+position = Vector2(2251.88, -1388)
 scale = Vector2(3.017, 2.821)
 texture = ExtResource("6_slxrd")
 
 [node name="grass3" type="Sprite2D" parent="."]
 modulate = Color(0.666259, 0.440947, 0.217133, 1)
 visibility_layer = 2
-position = Vector2(1587.15, -1414.24)
+position = Vector2(169.15, -1257.24)
 scale = Vector2(1.379, 2.024)
 texture = ExtResource("10_ie4p1")
 
@@ -681,7 +685,7 @@ texture = ExtResource("10_ie4p1")
 [node name="grass4" type="Sprite2D" parent="."]
 modulate = Color(0.666259, 0.440947, 0.217133, 1)
 visibility_layer = 2
-position = Vector2(3175.15, -1414.24)
+position = Vector2(1757.15, -1257.24)
 scale = Vector2(1.379, 2.024)
 texture = ExtResource("10_ie4p1")
 
@@ -693,21 +697,21 @@ texture = ExtResource("10_ie4p1")
 [node name="bg5" type="Sprite2D" parent="."]
 modulate = Color(0.933333, 0.729412, 0.541176, 1)
 visibility_layer = 2
-position = Vector2(394.88, -1489)
+position = Vector2(-1023.12, -1332)
 scale = Vector2(2.76, 2.48)
 texture = ExtResource("2_8vqd8")
 
 [node name="bg6" type="Sprite2D" parent="."]
 modulate = Color(0.932374, 0.731316, 0.542324, 1)
 visibility_layer = 2
-position = Vector2(-1193.12, -1489)
+position = Vector2(-2611.12, -1332)
 scale = Vector2(2.76, 2.48)
 texture = ExtResource("2_8vqd8")
 
 [node name="mountains5" type="Sprite2D" parent="."]
 modulate = Color(0.894467, 0.624387, 0.399465, 1)
 visibility_layer = 2
-position = Vector2(-1589.97, -1415)
+position = Vector2(-3007.97, -1258)
 scale = Vector2(1.379, 2.024)
 texture = ExtResource("4_1j0e4")
 
@@ -719,7 +723,7 @@ texture = ExtResource("4_1j0e4")
 [node name="mountains6" type="Sprite2D" parent="."]
 modulate = Color(0.894467, 0.624387, 0.399465, 1)
 visibility_layer = 2
-position = Vector2(-1.96997, -1415)
+position = Vector2(-1419.97, -1258)
 scale = Vector2(1.379, 2.024)
 texture = ExtResource("4_1j0e4")
 
@@ -731,21 +735,21 @@ texture = ExtResource("4_1j0e4")
 [node name="Sprite2D5" type="Sprite2D" parent="."]
 modulate = Color(0.929412, 0.866667, 0.45098, 1)
 visibility_layer = 2
-position = Vector2(-1207.97, -1417)
+position = Vector2(-2625.97, -1260)
 scale = Vector2(2.037, 2.037)
 texture = ExtResource("7_yeom1")
 
 [node name="Sprite2D6" type="Sprite2D" parent="."]
 modulate = Color(0.996078, 0.72549, 0.431373, 1)
 visibility_layer = 2
-position = Vector2(490.03, -1545)
+position = Vector2(-927.97, -1388)
 scale = Vector2(3.017, 2.821)
 texture = ExtResource("6_slxrd")
 
 [node name="grass5" type="Sprite2D" parent="."]
 modulate = Color(0.666259, 0.440947, 0.217133, 1)
 visibility_layer = 2
-position = Vector2(-1589.97, -1415)
+position = Vector2(-3007.97, -1258)
 scale = Vector2(1.379, 2.024)
 texture = ExtResource("10_ie4p1")
 
@@ -757,7 +761,7 @@ texture = ExtResource("10_ie4p1")
 [node name="grass6" type="Sprite2D" parent="."]
 modulate = Color(0.666259, 0.440947, 0.217133, 1)
 visibility_layer = 2
-position = Vector2(-1.96997, -1415)
+position = Vector2(-1419.97, -1258)
 scale = Vector2(1.379, 2.024)
 texture = ExtResource("10_ie4p1")
 
@@ -769,21 +773,21 @@ texture = ExtResource("10_ie4p1")
 [node name="bg7" type="Sprite2D" parent="."]
 modulate = Color(0.933333, 0.729412, 0.541176, 1)
 visibility_layer = 2
-position = Vector2(396.03, -1489)
+position = Vector2(-1021.97, -1332)
 scale = Vector2(2.76, 2.48)
 texture = ExtResource("2_8vqd8")
 
 [node name="bg8" type="Sprite2D" parent="."]
 modulate = Color(0.932374, 0.731316, 0.542324, 1)
 visibility_layer = 2
-position = Vector2(-1191.97, -1489)
+position = Vector2(-2609.97, -1332)
 scale = Vector2(2.76, 2.48)
 texture = ExtResource("2_8vqd8")
 
 [node name="mountains7" type="Sprite2D" parent="."]
 modulate = Color(0.894467, 0.624387, 0.399465, 1)
 visibility_layer = 2
-position = Vector2(-1589.97, -1415)
+position = Vector2(-3007.97, -1258)
 scale = Vector2(1.379, 2.024)
 texture = ExtResource("4_1j0e4")
 
@@ -795,7 +799,7 @@ texture = ExtResource("4_1j0e4")
 [node name="mountains8" type="Sprite2D" parent="."]
 modulate = Color(0.894467, 0.624387, 0.399465, 1)
 visibility_layer = 2
-position = Vector2(-1.96997, -1415)
+position = Vector2(-1419.97, -1258)
 scale = Vector2(1.379, 2.024)
 texture = ExtResource("4_1j0e4")
 
@@ -807,21 +811,21 @@ texture = ExtResource("4_1j0e4")
 [node name="Sprite2D7" type="Sprite2D" parent="."]
 modulate = Color(0.929412, 0.866667, 0.45098, 1)
 visibility_layer = 2
-position = Vector2(-1207.97, -1417)
+position = Vector2(-2625.97, -1260)
 scale = Vector2(2.037, 2.037)
 texture = ExtResource("7_yeom1")
 
 [node name="Sprite2D8" type="Sprite2D" parent="."]
 modulate = Color(0.996078, 0.72549, 0.431373, 1)
 visibility_layer = 2
-position = Vector2(490.03, -1545)
+position = Vector2(-927.97, -1388)
 scale = Vector2(3.017, 2.821)
 texture = ExtResource("6_slxrd")
 
 [node name="grass7" type="Sprite2D" parent="."]
 modulate = Color(0.666259, 0.440947, 0.217133, 1)
 visibility_layer = 2
-position = Vector2(-1589.97, -1415)
+position = Vector2(-3007.97, -1258)
 scale = Vector2(1.379, 2.024)
 texture = ExtResource("10_ie4p1")
 
@@ -833,7 +837,7 @@ texture = ExtResource("10_ie4p1")
 [node name="grass8" type="Sprite2D" parent="."]
 modulate = Color(0.666259, 0.440947, 0.217133, 1)
 visibility_layer = 2
-position = Vector2(-1.96997, -1415)
+position = Vector2(-1419.97, -1258)
 scale = Vector2(1.379, 2.024)
 texture = ExtResource("10_ie4p1")
 
@@ -908,6 +912,20 @@ position = Vector2(-1770, 514)
 layer_0/tile_data = PackedInt32Array(196576, 262144, 8, 196572, 262144, 8, 196580, 262144, 8, 196584, 262144, 8, 196588, 262144, 8, 196592, 262144, 8, 196596, 262144, 8, 196568, 262144, 8, 196564, 262144, 8, 196560, 262144, 8, 196556, 262144, 8, 196552, 262144, 8, 196548, 262144, 8, 196544, 262144, 8, 196540, 262144, 8, 196536, 262144, 8, 196532, 262144, 8, -65605, 327680, 10, -65601, 262144, 8, -65597, 262144, 8, -65593, 262144, 8, -65589, 262144, 8, -65585, 262144, 8, -65584, 262144, 8, -65616, 524288, 12, -327760, 262144, 7, -589906, 327680, 8, 458672, 524288, 12, 458676, 524288, 12, 458680, 524288, 12, 458684, 524288, 12, 458688, 524288, 12, 458692, 524288, 12, 458696, 524288, 12, 458700, 524288, 12, 458704, 524288, 12, 458708, 524288, 12, 458712, 524288, 12, 458716, 524288, 12, 458720, 524288, 12, 458724, 524288, 12, 458728, 524288, 12, 458732, 524288, 12, 458736, 524288, 12, 458740, 524288, 12, 458668, 524288, 12, 196528, 524288, 12, 196524, 524288, 12, -65620, 524288, 12, -327764, 524288, 12, -589910, 524288, 12, -327768, 524288, 12, -589914, 524288, 12, -327772, 524288, 12, -65624, 524288, 12, -65628, 524288, 12, 196520, 524288, 12, 196516, 524288, 12, 458660, 524288, 12, 458664, 524288, 12, -524328, 327680, 5, -524320, 327680, 4, -524324, 327680, 4, -524316, 327680, 3, -786510, 262144, 10, -786506, 262144, 10, -655434, 393216, 0, -655437, 393216, 0, -655441, 393216, 0, -65549, 262144, 4, -720947, 262144, 10, -852054, 262144, 7, -852058, 262144, 8, -852062, 262144, 8, -589918, 524288, 12, -327774, 524288, 12, -65630, 524288, 12, 196514, 524288, 12, 458658, 524288, 12, -983086, 327680, 3, -983090, 327680, 4, -983094, 327680, 4, -983098, 327680, 4, -983102, 327680, 4, -983106, 327680, 5, -1310814, 327680, 3, -1769566, 327680, 3, -1900627, 262144, 10, -1900623, 262144, 10, -1900619, 262144, 10, -1966146, 262144, 10, -1703994, 262144, 10, -1835057, 262144, 10, -1507354, 262144, 10, -1507350, 262144, 10, -1507346, 262144, 10, -1769555, 393216, 0, -1769551, 393216, 0, -1769547, 393216, 0, -1835074, 393216, 0, -1572922, 393216, 0, -1703985, 393216, 0, -1572904, 393216, 0, -1376282, 393216, 0, -1376277, 393216, 0, -1376278, 393216, 0, -1376274, 393216, 0, -589875, 393216, 0, -852037, 327680, 10, -852033, 327680, 8, -2031672, 327680, 6, -393242, 327680, 6, -393308, 327680, 6, -86, 327680, 6, -1572882, 262144, 6, 196600, 262144, 8, 196604, 262144, 8, 131072, 262144, 8, 131076, 262144, 8, 131080, 262144, 8, 131084, 262144, 8, 458744, 524288, 12, 458748, 524288, 12, 393216, 524288, 12, 393220, 524288, 12, 393224, 524288, 12, 393228, 524288, 12, -589883, 262144, 10, -720943, 262144, 10, -1638486, 262144, 10, -983128, 327680, 6, -1703990, 262144, 10, -458811, 393216, 0, -589871, 393216, 0, -1572918, 393216, 0, -1507414, 393216, 0, -65580, 327680, 8, -983077, 262144, 10, -983073, 262144, 10, -1769509, 262144, 10, -852005, 393216, 0, -852001, 393216, 0, -1638437, 393216, 0, -1703976, 262144, 10)
 layer_1/modulate = Color(1, 1, 1, 0.619608)
 layer_1/tile_data = PackedInt32Array(-130979, 458752, 1, -130974, 458752, 1, -130969, 458752, 1, -130964, 458752, 1, -130959, 458752, 1, -130954, 458752, 1, -130949, 458752, 1, -130944, 458752, 1, -130939, 458752, 1, -130984, 458752, 1, -130989, 458752, 1, -130994, 458752, 1, -131039, 458752, 1, -131044, 458752, 1, -131049, 589824, 1, -130902, 589824, 1, -130897, 458752, 1, -130892, 458752, 1, -130887, 458752, 1, -130882, 458752, 1, -130877, 458752, 1, -130864, 458752, 1, -130869, 589824, 1, -130859, 458752, 1, -130854, 458752, 1, -130849, 458752, 1, -130844, 458752, 1, -130839, 458752, 1, -130805, 458752, 1, -130800, 458752, 1, -130790, 458752, 1, -130785, 589824, 1, -130795, 589824, 1, -130767, 589824, 1, -131065, 589824, 1, -1441831, 327680, 12, -1704004, 327680, 12, -1441860, 327680, 12, -524364, 327680, 12, -262220, 327680, 12)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-3453, -257)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(148, 179)
+shape = SubResource("RectangleShape2D_fpact")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(2796, -55)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(148, 179)
+shape = SubResource("RectangleShape2D_fpact")
 
 [connection signal="body_entered" from="enter sheriffs office" to="enter sheriffs office" method="_on_body_entered"]
 [connection signal="body_exited" from="enter sheriffs office" to="enter sheriffs office" method="_on_body_exited"]
