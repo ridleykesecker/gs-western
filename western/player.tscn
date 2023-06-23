@@ -1,12 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://ch5ml5k2kaq6w"]
+[gd_scene load_steps=12 format=3 uid="uid://ch5ml5k2kaq6w"]
 
-[ext_resource type="Texture2D" uid="uid://dh0swng4y7xf6" path="res://Screenshot 2023-06-20 140809.png" id="1_h02ga"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_qqjkw"]
 [ext_resource type="Texture2D" uid="uid://dfyqjkqb5kqid" path="res://Player.png" id="3_5up55"]
 [ext_resource type="Texture2D" uid="uid://der1l7xths6vh" path="res://Player (2).png" id="3_gh558"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0dwsb"]
-size = Vector2(71.993, 120.56)
+size = Vector2(133.702, 284.601)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wjqk5"]
 atlas = ExtResource("3_gh558")
@@ -64,23 +63,15 @@ _data = {
 script = ExtResource("1_qqjkw")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
-limit_left = -632
-limit_right = 1550
-limit_bottom = 632
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.249999)
+position = Vector2(1, 3)
 scale = Vector2(0.194463, 0.252986)
 shape = SubResource("RectangleShape2D_0dwsb")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.133696, 0.112319)
-texture = ExtResource("1_h02ga")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(339, 290)
-scale = Vector2(1.66957, 1.58955)
+position = Vector2(7.62939e-06, 9.09495e-13)
+scale = Vector2(0.318118, 0.302871)
 sprite_frames = SubResource("SpriteFrames_6356m")
 animation = &"Walking"
 frame_progress = 0.288669
