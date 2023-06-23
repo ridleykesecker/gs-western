@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ch5ml5k2kaq6w" path="res://player.tscn" id="2_hdpux"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qjd75"]
-size = Vector2(47, 78)
+size = Vector2(47, 68)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38ns5"]
 size = Vector2(562, 80)
@@ -24,7 +24,7 @@ text = "bank
 script = ExtResource("1_r53oq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bankexit"]
-position = Vector2(864.5, 547)
+position = Vector2(864.5, 542)
 shape = SubResource("RectangleShape2D_qjd75")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

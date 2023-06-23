@@ -7,9 +7,9 @@ func _process(delta):
 		get_tree().change_scene_to_file("res://town_outside.tscn")
 		at_door = false
 
-func _on_body_entered(_bankexit):
+func _on_body_entered(body):
 	at_door = true
 
 
-func _on_body_exited(_bankexit):
+func _on_body_exited(body):
 	at_door = false
